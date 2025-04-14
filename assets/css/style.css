@@ -1,0 +1,73 @@
+
+/* Estilo base: sin márgenes, padding y fuente uniforme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* Centra la calculadora en pantalla con fondo blanco */
+body {
+    min-height: 100vh;
+    background-color: #ffffff;
+    display: grid;
+    place-items: center;
+   
+/* Contenedor de la calculadora con diseño en cuadrícula */
+}
+.calculadora {
+    background-color: #48bfff;
+    color:rgb(234, 218, 129);
+    width:350px;
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    box-shadow: 0 0 20px #48bfff;
+
+/* Pantalla de resultados: ocupa 4 columnas */    
+}
+.pantalla {
+    grid-column: 1 / 5;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: 5rem;
+    margin-bottom: 1.5rem;
+    font-family: monospace;
+    font-weight: bold ;
+}
+
+/* Botones: estilo uniforme y centrado */
+.btn {
+    background-color: #004f78;
+    color:rgb(254, 254, 252);
+    border:0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+}
+
+/* Botón "0" ocupa 3 columnas */
+#cero{
+    grid-column: span 3;
+}
+/* Botón "=" ocupa 2 filas y tiene color especial */
+
+#igual{
+    grid-row: span 2;
+    background-color: rgb(78, 145, 197);
+}
+
+/* Cambia color del botón "=" al pasar el cursor */
+#igual:hover{
+    background-color:#5da1e5 ;
+}
+/*Cambia color de los botones al pasar el cuersor*/
+.btn:hover{
+    background-color: #5da1e5;
+}
